@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom's Scoop</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- content container for the entire website -->
+    <div class="container-about">
+        <header>
+            <!-- global nav across all pages of the website -->
+            <nav class="main-nav">
+                <a href="index.html"><img src="images/moms_scoop_logo_24.png" alt="mom's scoop logo" class="logo"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="cater.html">Catering</a></li>
+                    <!-- to demonstrate the knowledge of writing the code for the original design of the website but commented out because only 3 pages needed -->
+                    <!-- <li><a href="#menu" >Menu</a></li>
+                    <li><a href="#craftsales" >Craft Sales</a></li>
+                    <li><a href="#communityevents" >Community Events</a></li> -->
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- main content section -->
+            <!-- group of 3 divs composing the content of the about page to be organized using grid -->
+            <section id="three-cards">
+                <!-- our story div - aligned in columns for desktop and rows for tablet and mobile -->
+                <div class="ourstory">
+                    <h2>Our Story</h2>
+                    <p>Started by a single mom 10 years ago from her home kitchen - now a 5-year-old ice cream shop
+                        located on Hinton Ave.</p>
+                </div>
+                <!-- find us div - aligned in columns for desktop and rows for tablet and mobile -->
+                <div class="findus">
+                    <h2>Contact Us</h2>
+                    <h3>Hours of Operations:</h3>
+                    <p>Mon-Thurs: 11am-8pm<br />
+                        Fri-Sun: 9am-10pm
+                    </p>
+                    <!-- embed google map of hinton ave -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2801.4846606274536!2d-75.73284778423472!3d45.39956544577459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce043d1f295ac9%3A0x7dc2acdd06a3d01d!2sHinton%20Ave%20N%2C%20Ottawa%2C%20ON!5e0!3m2!1sen!2sca!4v1635783737411!5m2!1sen!2sca"
+                        height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <!-- mission div - aligned in columns for desktop and rows for tablet and mobile -->
+                <div class="ourmission">
+                    <h2>Our Mission</h2>
+                    <p>To become a staple on a global scal by developing a family-friendly ice cream shop that offers a
+                        tasty and healthier dessert.</p>
+                </div>
+            </section>
+            <!-- grouping of social icons to adjust as a group in css -->
+            <section class="socialicons">
+                <a href="https://instagram.com" target="blank"><img src="images/icons8-instagram-logo-100.png"
+                        alt="instagram icon"></a>
+                <a href="https://tiktok.com" target="blank"><img src="images/icons8-tiktok-100.png"
+                        alt="tiktok icon"></a>
+                <a href="https://twitter.com" target="blank"><img src="images/icons8-twitter-100.png"
+                        alt="twitter icon"></a>
+            </section>
+        </main>
+        <footer class="about-footer">
+            <h3>Copyright &copy; Mom's Scoop &trade;</h3>
+        </footer>
+    </div>
+
+</body>
+
+</html>

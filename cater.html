@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom's Scoop</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="cater-body">
+    <!-- container for entire website content -->
+    <div class="container-cater">
+        <header>
+            <!-- global nav across all pages -->
+            <nav class="main-nav">
+                <a href="index.html"><img src="images/moms_scoop_logo_24.png" alt="mom's scoop logo" class="logo"></a>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cater.html">Catering</a></li>
+                    <!-- to demonstrate the knowledge of writing the code for the original design of the website but commented out because only 3 pages needed -->
+                    <!-- <li><a href="#home">Menu</a></li>
+                    <li><a href="#home">Craft Sales</a></li>
+                    <li><a href="#home">Community Events</a></li> -->
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- contact form section for user to contact the company -->
+            <section class="form">
+                <h2>The Catering Crew Caters to You</h2>
+                <h3>Let us know how we can cater to your needs</h3>
+                <!-- contact form code for the actual form not the entire section -->
+                <form class="caterform">
+                    <!-- input fields for email and name  -->
+                    <label for="FullName">Full Name</label>
+                    <input type="text" name="FullName" id="FullName" placeholder="Enter your full name"><br />
+                    <label for="Email">Email</label>
+                    <input type="text" name="Email" id="Email" placeholder="Enter your email address"><br />
+                    <label for="EventType">Event Type</label>
+                    <!-- drop down menu select options -->
+                    <select name="EventType" id="EventType">
+                        <option selected>Event Type</option>
+                        <option value="Birthday">Birthday</option>
+                        <option value="Wedding">Wedding</option>
+                        <option value="Anniversary">Anniversary</option>
+                        <option value="Business">Business</option>
+                    </select>
+                    <!-- radio buttons selection -->
+                    <div class="time-select">
+                        <h3>Select the time of week</h3>
+
+                        <label for="btn-weekdays" id="btn-weekday">
+                            <input id="btn-weekdays" type="radio" name="ToW" value="Weekday" class="input">Weekday
+                        </label>
+
+                        <label for="btn-weekends" id="btn-weekend">
+                            <input id="btn-weekends" type="radio" name="ToW" value="Weekend" class="input">Weekend
+                        </label>
+
+                        <label for="btn-holidays" id="btn-holiday">
+                            <input id="btn-holidays" type="radio" name="ToW" value="Holiday" class="input">Holiday
+                        </label>
+                    </div>
+                    <!-- textarea for the extra comments the user may want to write -->
+                    <div class="additional-comments">
+                        <h3>Please provide any additional comments</h3>
+                        <textarea name="comments" id="submit" class="comments" placeholder="Enter your comments here..."
+                            cols="30" rows="10"></textarea>
+                        <button type="submit" class="commentsbtn">Cater Now</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer class="cater-footer">
+            <!-- global footer across all pages -->
+            <h3>Copyright &copy; Mom's Scoop &trade;</h3>
+        </footer>
+    </div>
+
+</body>
+
+</html>

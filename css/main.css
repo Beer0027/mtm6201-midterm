@@ -1,0 +1,716 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* apply border box property too all website content */
+* {
+	box-sizing: border-box;
+}
+
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	/* display block for all sections of the website */
+	display: block;
+}
+
+/* apply font styles and paragraph styles to all body content and disable overflow */
+body {
+	line-height: 1;
+	font-family: raleway;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+/* enable overflow content at tablet size and below for home and about pages */
+@media screen and (max-width: 1024px) {
+	body {
+		overflow: visible;
+	}
+
+	.cater-body {
+		overflow: hidden;
+	}
+}
+
+/* enable overflow content at mobile size for catering page */
+@media screen and (max-width: 640px) {
+	.cater-body {
+		overflow: visible;
+	}
+}
+
+
+
+ol,
+ul,
+dl {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom properties---------------------- */
+:root {
+	--container-padding: 20px 60px;
+	--logo-width: 200px;
+}
+
+/* to display the nav items inline with eachother horizontally and to center and space the content to fit design */
+.main-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* set logo size with global custom property and to switch cursor for the user to know where the logo is  */
+.logo {
+	width: var(--logo-width);
+	cursor: pointer;
+}
+
+/* media query for mobile size */
+@media screen and (max-width:640px) {
+
+	/* to make the nav li's stack on top of eachother when the screen size is smaller */
+	.main-nav {
+		flex-wrap: wrap;
+	}
+
+	/* center logo */
+	.main-nav img {
+		margin: 0 auto;
+	}
+
+	.main-nav ul {
+		flex: 1 0 100%;
+	}
+
+	/* ceneter nav li's */
+	.main-nav ul li {
+		width: 100%;
+		text-align: center;
+	}
+
+	/* add design spacing between nav li's when stacked */
+	.main-nav ul li:nth-child(2) {
+		padding: 10px 0;
+	}
+}
+
+/* style the nav li's to fit design */
+.main-nav li a {
+	margin: 0 20px;
+	text-decoration: none;
+	color: #f5f7fa;
+	text-transform: uppercase;
+	position: relative;
+	letter-spacing: 3px;
+}
+
+/* reduce letter spacing for nav li a's for bigger tablet size */
+@media screen and (max-width:1024px) {
+	.main-nav li a {
+		letter-spacing: 2px;
+	}
+}
+
+.main-nav li {
+	display: inline-block;
+	align-items: center;
+	flex-direction: row;
+}
+
+@media screen and (max-width:1024px) {
+	.main-nav li {
+		font-size: 0.8rem;
+	}
+}
+
+/* style h2 within the form section on the cater page */
+.form h2 {
+	text-align: center;
+	padding: 30px;
+	font-size: 42px;
+	font-family: Great Vibes;
+	color: #f5f7fa;
+}
+
+/* style label text within the form on cater page */
+.form label {
+	color: #f5f7fa;
+	margin: 10px auto;
+	display: inline-block;
+}
+
+form.caterform label:nth-child(1),
+form.caterform label:nth-child(4),
+form.caterform label:nth-child(7) {
+	width: 36%;
+}
+
+/* use of > to apply to direct child */
+form.caterform>input:nth-child(2),
+form.caterform input:nth-child(5),
+form.caterform select:nth-child(8) {
+	width: 62%;
+}
+
+/* media query for form content on cater page which applies to mobile size */
+@media screen and (max-width:640px) {
+
+	form.caterform label:nth-child(1),
+	form.caterform>input:nth-child(2),
+	form.caterform label:nth-child(4),
+	form.caterform input:nth-child(5),
+	form.caterform label:nth-child(7),
+	form.caterform select:nth-child(8) {
+		width: 100%;
+	}
+
+	select {
+		margin-bottom: 20px;
+	}
+
+}
+
+label#btn-weekday,
+label#btn-weekend,
+label#btn-holiday {
+	margin: 5px 0 !important;
+}
+
+form div h3 {
+	padding-top: 10px;
+}
+
+/* to style nav li hover and non hover states */
+.main-nav li a::after {
+	content: "";
+	height: 3px;
+	width: 0;
+	background: #00ff7f;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+}
+
+.main-nav li a:hover::after {
+	width: 100%;
+	transition: .5s;
+}
+
+.dailyscoop {
+	max-width: 500px;
+	background-color: rgba(0, 255, 127, 0.6);
+	padding: 10px 50px;
+	margin-top: 130px;
+
+}
+
+/* to center homepage and cater page content for biggest tablet size query */
+@media screen and (max-width:1024px) {
+
+	.dailyscoop,
+	.form {
+		margin: 60px auto 0px auto;
+	}
+
+	h3 {
+		/* important tags used to overide css styles because queries are purposely placed near corresponding elements for other screen sizes instead of having a queries section for each size  */
+		font-size: 1.1em !important;
+	}
+}
+
+@media screen and (max-width:640px) {
+
+	.dailyscoop,
+	.form {
+		margin: 20px auto 0px auto;
+		padding: 10px 25px !important;
+	}
+
+}
+
+
+/* to style entire website container content for home page */
+.container-home {
+	width: 100%;
+	height: 100vh;
+	background-image: url("/images/home_ice.png");
+	background-size: cover;
+	background-position: center;
+	padding: var(--container-padding);
+}
+
+/* to style entire website container content for about page */
+.container-about {
+	width: 100%;
+	height: 100vh;
+	background-image: url("/images/rustic_ice.png");
+	background-size: cover;
+	background-position: center;
+	padding: var(--container-padding);
+	/* to apple a grey overall with opacity ontop of background image to help with visibility of text */
+	box-shadow: inset 0 0 0 2000px rgba(56, 56, 56, 0.6);
+}
+
+/* to style entire website container content for cater page */
+.container-cater {
+	width: 100%;
+	height: 100vh;
+	background-image: url("/images/rustic_cream.png");
+	background-size: cover;
+	background-position: center;
+	padding: var(--container-padding);
+}
+
+/* to set style padding and position for all main content on each page for biggest tablet size */
+@media screen and (max-width:1024px) {
+
+	.container-home,
+	.container-about,
+	.container-cater {
+		padding: 20px 60px 0px 60px;
+	}
+
+	.container-about {
+		height: auto;
+	}
+
+}
+
+/* to set style padding and position for all main content on each page for mobile size */
+@media screen and (max-width:640px) {
+
+	.container-home,
+	.container-about,
+	.container-cater {
+		padding: 20px 20px 0 20px;
+	}
+
+	.container-cater {
+		height: auto;
+	}
+}
+
+
+.container-cater .form {
+	max-width: 550px;
+	background-color: rgba(0, 255, 127, 0.6);
+	padding: 10px 50px;
+	margin-top: 30px;
+}
+
+textarea {
+	display: block;
+	width: 100%;
+}
+
+/* grid used for about page main content */
+section#three-cards {
+	display: grid;
+	grid-template-areas:
+		"Story Findus mission";
+	grid-template-columns: 32% 32% 32%;
+	grid-template-rows: auto;
+	width: auto;
+	margin: 50px auto 0 auto;
+	justify-content: space-between;
+}
+
+/* to switch grid layout for biggest tablet and below for main about page content */
+@media screen and (max-width:1024px) {
+	section#three-cards {
+		grid-template-areas:
+			"Story"
+			"Findus"
+			"mission";
+		grid-template-columns: 100%;
+		grid-template-rows: auto;
+		row-gap: 15px;
+		margin-top: 25px;
+	}
+}
+
+/* style for each individual div for about page main content */
+section#three-cards .ourstory {
+	grid-area: Story;
+	text-align: center;
+	background-color: rgba(51, 3, 47, .6);
+	color: #f5f7fa;
+}
+
+/* style for each individual div for about page main content */
+section#three-cards .findus {
+	grid-area: Findus;
+	text-align: center;
+	background-color: rgba(0, 255, 127, 0.6);
+	color: #f5f7fa;
+}
+
+/* style for each individual div for about page main content */
+
+section#three-cards .ourmission {
+	grid-area: mission;
+	text-align: center;
+	background-color: rgba(51, 3, 47, .6);
+	color: #f5f7fa;
+}
+
+/* apple eqaul padding to all divs in about page main content */
+.ourstory,
+.ourmission,
+.findus {
+	padding: 20px;
+}
+
+.findus h3 {
+	padding-top: 20px;
+	text-align: center;
+}
+
+textarea {
+	resize: none;
+}
+
+.dailyscoop h1,
+p {
+	padding: 20px 0;
+	color: #f5f7fa;
+}
+
+/* general style for all h1 */
+h1 {
+	text-align: center;
+	padding: 30px;
+	font-size: 42px;
+	font-family: Great Vibes;
+}
+
+/* general style for all h2 */
+h2 {
+	text-align: center;
+	padding: 30px;
+	font-size: 42px;
+	font-family: Great Vibes;
+}
+
+/* general h3 styles */
+h3 {
+	font-weight: bold;
+	font-size: 1.2em;
+	padding-bottom: 7px;
+	color: #f5f7fa;
+	text-align: left;
+	text-transform: capitalize;
+}
+
+/* adjusted styles for H tags when using biggest tablet size */
+@media screen and (max-width:1024px) {
+
+	h1,
+	h2 {
+		padding: 25px;
+	}
+
+	.findus h3 {
+		padding-top: 10px;
+		text-align: center;
+	}
+
+}
+
+/* center textarea and corresponding heading and button on cater page */
+.additional-comments {
+	text-align: center;
+}
+
+.additional-comments h3 {
+	margin-bottom: 10px;
+}
+
+/* style button */
+button {
+	margin-top: 10px;
+	color: #f5f7fa;
+	background-color: #33032f;
+	border: none;
+	padding: 10px;
+	width: 100%;
+	text-transform: uppercase;
+	font-family: raleway;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+
+/* button animation on hover */
+button:hover {
+	background: #fff;
+	color: #33032f;
+	animation-name: submit-hover;
+	animation-duration: 0.7s;
+}
+
+@keyframes submit-hover {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+/* organize layout for social icons */
+.socialicons {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+/* animation for hover on social icons */
+.socialicons img:hover {
+	animation-name: img-hover;
+	animation-duration: 0.7s;
+}
+
+@keyframes img-hover {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.25);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+.dailyscoop dl {
+	color: #f5f7fa;
+}
+
+.dailyscoop dl,
+.dailyscoop p {
+	line-height: 1.5;
+}
+
+/* global line height all P's */
+p {
+	line-height: 1.5;
+}
+
+/* style list on Home page */
+.dailyscoopw dt {
+	font-weight: bold;
+	font-size: 1.2em;
+	padding-bottom: 7px;
+}
+
+.dailyscoopw :nth-child(3) {
+	padding-top: 20px;
+}
+
+.dailyscoopw :nth-child(4) {
+	padding-bottom: 20px;
+}
+
+/* style radio button section on form on cater page */
+.time-select {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.time-select h3 {
+	width: 100%;
+}
+
+.time-select label {
+	flex: 1 0 100%;
+}
+
+/* style footer content - make footer at bottom when you can't scroll */
+footer {
+	position: absolute;
+	bottom: 0;
+}
+
+/* style footer for biggest tablet size */
+@media screen and (max-width:1024px) {
+
+	.about-footer {
+		position: static;
+	}
+
+	.home-footer,
+	.cater-footer {
+		left: 50%;
+		transform: translate(-50%, 0);
+		width: 100%;
+		bottom: 0;
+	}
+
+}
+
+/* make footer at the bottom when scrolling  */
+@media screen and (max-width: 640px) {
+	.cater-footer {
+		position: static;
+		transform: translate(0, 0);
+	}
+}
+
+
+footer h3 {
+	color: #c33c54;
+	padding: 10px 0;
+}
+
+@media screen and (max-width:1024px) {
+	footer h3 {
+		text-align: center;
+
+	}
+}
+
+iframe {
+	width: 100%;
+}
+
+/* -----------------------------------------------Tablet Query---------------------------------
+---------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+------------------------------------------------------------------*/
+
+
+
+/* -------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+--------------------------Mobile Query------------------------------------
+----------------------------------------------------------------------- */
